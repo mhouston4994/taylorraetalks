@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: '',
+  title: 'Taylor Rae Talks',
   name: 'Taylor Rae Talks',
   subtitle: 'Spiritual Awareness Coach',
   cta: '',
