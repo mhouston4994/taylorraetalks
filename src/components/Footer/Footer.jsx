@@ -37,7 +37,7 @@ const Footer = () => {
         <hr />
         <p className="footer__text">
           © {new Date().getFullYear()} - Developed by{' '}
-          <a href="https://www.linkedin.com/in/matthew-houston-a0461418b/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.pardition.com" target="_blank" rel="noopener noreferrer">
             Matthew Houston
           </a>
         </p>

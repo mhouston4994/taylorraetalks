@@ -13,7 +13,7 @@ const SampleCard = (props) => {
   let {img, title, info} = props
   return (
 <>
-                <Card style={{ 'padding-bottom': '40px', 'border' : 'none' }}>
+                <Card style={{ 'paddingBottom': '40px', 'border' : 'none' }}>
                 <ProjectImg alt={title} filename={img} />
                 <Card.Body>
                   <Card.Title>{title}</Card.Title>

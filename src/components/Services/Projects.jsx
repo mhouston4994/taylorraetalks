@@ -6,8 +6,6 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import Slider from "react-slick";
 import SampleCard from './Card'
-import { nanoid } from 'nanoid';
-
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -43,7 +41,7 @@ const Projects = () => {
             const { title, info, info2, url, repo, img, id } = project;
             return (
               <Carousel.Item>
-                <SampleCard img={img} title={title} info={info} key={nanoid()}/>
+                <SampleCard img={img} title={title} info={info}/>
                 </Carousel.Item>
             )
           })}

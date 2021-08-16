@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useHistory} from 'react-router'
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
@@ -7,7 +6,6 @@ import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
-  const history = useHistory();
   const { about } = useContext(PortfolioContext);
   const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
 
@@ -24,9 +22,6 @@ const About = () => {
     }
   }, []);
 
-  const handleClick = () => {
-    history.push('/BlogIndex')
-  }
 
   return (
     <section id="about">
@@ -35,9 +30,9 @@ const About = () => {
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
+              {/* <div className="about-wrapper__image"> */}
                 <AboutImg alt="profile picture" filename={img} />
-              </div>
+              {/* </div> */}
             </Fade>
           </Col>
           <Col md={6} sm={12}>
@@ -54,15 +49,7 @@ const About = () => {
                 <p className="about-wrapper__info-text">
                   {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
                 </p>
-                {resume && (
-                  <span className="d-flex mt-3">
-                    <a
-                      className="cta-btn cta-btn--resume"
-                      onClick={handleClick}
-                    > Blog
-                    </a>
-                  </span>
-                )}
+                
               </div>
             </Fade>
           </Col>
