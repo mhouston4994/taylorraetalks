@@ -1,21 +1,23 @@
 #about {
   background-color: $primary-color;
-  background-image: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    $secondary-color 100%
-  );
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white-color;
+  font-weight: 700;
   height: 100%;
   border-top: 0px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   padding-bottom: 10%;
+  position: relative;
+  z-index: 2;
 
   @include respond(tab-land) {
     height: 100%;
     -webkit-clip-path: none;
     clip-path: none;
+  }
+  .container {
+    display: inline-block !important;
   }
 
   .about-wrapper {
@@ -28,6 +30,7 @@
       height: 100%;
       align-items: center;
       justify-content: center;
+      border-radius: 15%;
 
       @include respond(tab-port) {
         padding-bottom: 6.4rem;

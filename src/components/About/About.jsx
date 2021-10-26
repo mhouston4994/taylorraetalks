@@ -4,6 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
+import { Link } from 'react-scroll';
+
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -28,14 +30,14 @@ const About = () => {
       <Container>
         <Title title="About Me" />
         <Row className="about-wrapper">
-          <Col md={6} sm={12}>
+          <Col lg={4} md={12} sm={12} style={{display: 'flex', overflow: 'hidden',justifyContent: 'center'}}>
             <Fade bottom duration={1000} delay={600} distance="30px">
               {/* <div className="about-wrapper__image"> */}
                 <AboutImg alt="profile picture" filename={img} />
               {/* </div> */}
             </Fade>
           </Col>
-          <Col md={6} sm={12}>
+          <Col lg={8} md={12} sm={12}>
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
@@ -49,6 +51,12 @@ const About = () => {
                 <p className="about-wrapper__info-text">
                   {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
                 </p>
+                  <span className="d-flex mt-3">
+                  <Link to="services" smooth duration={2000}
+                      className="cta-btn cta-btn--resume"
+                    >Services
+                    </Link>
+                  </span>
                 
               </div>
             </Fade>

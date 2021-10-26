@@ -10,9 +10,12 @@
 @import './layout/footer';
 @import './layout/sections';
 
+@import './sections/backgroundSections';
 @import './sections/about';
 @import './sections/contact';
 @import './sections/hero';
+@import './sections/paralax';
+@import './sections/services';
 @import './sections/projects';
 
 @import './vendor/css/font-awesome.min.css';

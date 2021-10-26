@@ -37,7 +37,7 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Testimonials" />
+          <Title title="Testimonials" style={{color: isDesktop ? '#fff !important' : '#000 !important'}}/>
           <Carousel {...settings}>
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;

@@ -101,6 +101,11 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
+      name: 'spotify',
+      url: 'https://open.spotify.com/show/40PqdWSXfU38BLmxXnV6rX',
+    },
+    {
+      id: nanoid(),
       name: 'instagram',
       url: 'https://www.instagram.com/taylorraetalks_/',
     },
