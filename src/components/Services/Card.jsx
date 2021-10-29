@@ -12,14 +12,14 @@ import { Link } from 'react-scroll';
 
 const Card = (props) => {
 
-  let {name, desc} = props
+  let {name, desc, link} = props
   return (
     <div className="serviceCard">
       <div className="serviceBox">
         <div className="serviceContent">
           <h3>{name}</h3>
           <p>{desc}</p>
-          <Link to='contact' smooth duration={2000}>Learn More</Link>
+          <a target="_blank" href={link}>Learn More</a>
         </div>
       </div>
     </div>
